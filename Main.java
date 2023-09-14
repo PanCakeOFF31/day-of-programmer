@@ -16,14 +16,7 @@ public class Main {
     }
 
     // Метод определяет: является ли переданный год високосным?
-    public static boolean isLeapYear(int year) {
-
-        boolean option_1 = (year % 4 == 0 && year %100 != 0);
-        boolean option_2 = (year % 4 == 0 && year % 400 == 0);
-
-        if (option_1 || option_2 ) {
-            return true;
-        }
-        return false;
+    private static boolean isLeapYear(int year) {
+        return (year %4 == 0 && (year % 400 == 0 || year % 100 != 0));
     }
 }
